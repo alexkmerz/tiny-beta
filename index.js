@@ -1,2 +1,2 @@
-import './http.js'
-import './hello.js'
+import './lib/http'
+import './test'

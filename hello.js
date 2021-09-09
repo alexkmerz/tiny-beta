@@ -1,8 +1,13 @@
-import { router } from './http.js'
+import { app } from './http.js'
 
-router.get('/hello', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
+app.get('/', (req, res) => {
+  res.writeHead(200)
+  res.end('hello world')
+})
+
+app.get('/hello', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify({
     data: 'Hello World!'
-  }));
+  }))
 })
